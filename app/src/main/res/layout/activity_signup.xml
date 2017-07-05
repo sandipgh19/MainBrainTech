@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:elevation="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Space
+                    android:id="@+id/centerAlignSpace"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/city_layout"
+                    style="@style/AppTheme.Text.TextInputLayout"
+                    android:layout_alignEnd="@+id/centerAlignSpace"
+                    android:layout_alignRight="@+id/centerAlignSpace"
+                    app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
+                    app:hintTextAppearance="@style/AppTheme.Text.HintText">
+
+                    <EditText
+                        android:id="@+id/city"
+                        style="@style/AppTheme.EditText2"
+                        android:hint="First Name"
+                        android:inputType="textPostalAddress" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/pincode_layout"
+                    style="@style/AppTheme.Text.TextInputLayout"
+                    android:layout_alignTop="@+id/city_layout"
+                    android:layout_alignLeft="@+id/centerAlignSpace"
+                    android:layout_alignStart="@+id/centerAlignSpace"
+                    app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
+                    app:hintTextAppearance="@style/AppTheme.Text.HintText">
+
+                    <EditText
+                        android:id="@+id/pincode"
+                        style="@style/AppTheme.EditText2"
+                        android:hint="Last Name"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/AppTheme.Text.TextInputLayout"
+                app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
+                app:hintTextAppearance="@style/AppTheme.Text.HintText">
+
+                <EditText
+                    style="@style/AppTheme.EditText2"
+                    android:hint="Date of Birth"
+                    android:inputType="textPersonName"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/AppTheme.Text.TextInputLayout"
+                app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
+                app:hintTextAppearance="@style/AppTheme.Text.HintText">
+
+                <EditText
+                    style="@style/AppTheme.EditText2"
+                    android:hint="Email"
+                    android:inputType="textPersonName"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/AppTheme.Text.TextInputLayout"
+                app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
+                app:hintTextAppearance="@style/AppTheme.Text.HintText">
+
+                <EditText
+                    style="@style/AppTheme.EditText2"
+                    android:hint="Phone"
+                    android:inputType="textPersonName"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"></Spinner>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"></Spinner>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"></Spinner>
+
+
+
+
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/AppTheme.Text.TextInputLayout"
+                app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
+                app:hintTextAppearance="@style/AppTheme.Text.HintText">
+
+                <EditText
+                    style="@style/AppTheme.EditText2"
+                    android:hint="Function"
+                    android:inputType="textPersonName"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:text="I Agree with Goverment Jobs Terms &amp;\n Conditions"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:text="Submit"/>
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
