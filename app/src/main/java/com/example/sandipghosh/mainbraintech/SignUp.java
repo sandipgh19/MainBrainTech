@@ -17,6 +17,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -43,13 +44,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     private TextInputLayout qualificationInput;
     private ScrollView scrollView;
     private TextView agree;
-    Calendar dateSelected;
-    private DatePickerDialog datePickerDialog;
-
-    static final int DATE_DIALOG_ID = 0;
-    private int pYear;
-    private int pMonth;
-    private int pDay;
+    Calendar calendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +81,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         qualificationInput = (TextInputLayout) findViewById(R.id.academic_layout);
         scrollView = (ScrollView) findViewById(R.id.signupScroll);
 
-        dateSelected =  Calendar.getInstance();
+        calendar = Calendar.getInstance();
 
         List<String> location1 = new ArrayList<String>();
         location1.add("Currect Location");
@@ -237,38 +232,46 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
             checkBox.toggle();
         } else if(v==image) {
 
-            showDialog(DATE_DIALOG_ID);
+            dateSelected();
         }
     }
 
-    private DatePickerDialog.OnDateSetListener pDateSetListener =
-            new DatePickerDialog.OnDateSetListener() {
 
-                public void onDateSet(DatePicker view, int year,
-                                      int monthOfYear, int dayOfMonth) {
-                    pYear = year;
-                    pMonth = monthOfYear;
-                    pDay = dayOfMonth;
-                    updateDisplay();
-                }
-            };
 
-    private void updateDisplay() {
-        dob.setText(
-                new StringBuilder()
-                        // Month is 0 based so add 1
-                        .append(pMonth + 1).append("/")
-                        .append(pDay).append("/")
-                        .append(pYear).append(" "));
+
+    private void dateSelected() {
+
+        final Calendar c = calendar;
+        int mYear = c.get(Calendar.YEAR);
+        int mMonth = c.get(Calendar.MONTH);
+        int mDay = c.get(Calendar.DATE);
+
+        DatePickerDialog datePickerDialog1 = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int day) {
+                final Calendar u = Calendar.getInstance();
+                u.set(year, month, day);
+                calendar.set(Calendar.DATE, day);
+                calendar.set(Calendar.MONTH, month);
+                calendar.set(Calendar.YEAR, year);
+                setDateTime(calendar);
+            }
+        }, mYear, mMonth, mDay);
+        datePickerDialog1.show();
     }
 
-    protected Dialog onCreateDialog(int id) {
-        switch (id) {
-            case DATE_DIALOG_ID:
-                return new DatePickerDialog(this,
-                        pDateSetListener,
-                        pYear, pMonth, pDay);
-        }
-        return null;
+    private void setDateTime(Calendar calendar) {
+        SimpleDateFormat formatMonth = new SimpleDateFormat("MMM");
+        SimpleDateFormat formatYear = new SimpleDateFormat("yyyy");
+
+
+        int mDate = calendar.get(Calendar.DATE);
+        String mMonth =formatMonth.format(calendar.getTime());
+        String mYear = formatYear.format(calendar.getTime());
+
+        dob.setText(String.valueOf(mDate)+"/"+mMonth+"/"+mYear);
     }
+
+
+
 }

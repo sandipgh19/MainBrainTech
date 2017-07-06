@@ -22,6 +22,7 @@
     </android.support.design.widget.AppBarLayout>
 
     <ScrollView
+        android:id="@+id/applicationScroll"
         android:layout_width="match_parent"
         android:layout_marginTop="60dp"
         android:background="@color/white"
@@ -53,6 +54,7 @@
                         android:text="Application reference no.\n1234567890"/>
 
                     <android.support.design.widget.TextInputLayout
+                        android:id="@+id/aadharInput"
                         style="@style/AppTheme.Text.TextInputLayout"
                         app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -66,6 +68,7 @@
                     </android.support.design.widget.TextInputLayout>
 
                     <android.support.design.widget.TextInputLayout
+                        android:id="@+id/nameInput"
                         style="@style/AppTheme.Text.TextInputLayout"
                         app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -79,6 +82,7 @@
                     </android.support.design.widget.TextInputLayout>
 
                     <android.support.design.widget.TextInputLayout
+                        android:id="@+id/mobileInput"
                         style="@style/AppTheme.Text.TextInputLayout"
                         app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -95,6 +99,7 @@
                             android:layout_height="wrap_content">
 
                             <android.support.design.widget.TextInputLayout
+                                android:id="@+id/dobInput"
                                 style="@style/AppTheme.Text.TextInputLayout"
                                 app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                                 app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -120,6 +125,7 @@
                         </FrameLayout>
 
                     <android.support.design.widget.TextInputLayout
+                        android:id="@+id/emailInput"
                         style="@style/AppTheme.Text.TextInputLayout"
                         app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -261,6 +267,7 @@
                 android:textSize="20dp"/>
 
             <android.support.design.widget.TextInputLayout
+                android:id="@+id/cadd1Input"
                 style="@style/AppTheme.Text.TextInputLayout"
                 app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                 app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -275,6 +282,7 @@
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
+                android:id="@+id/cadd2Input"
                 style="@style/AppTheme.Text.TextInputLayout"
                 app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                 app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -302,6 +310,7 @@
 
 
                     <android.support.design.widget.TextInputLayout
+                        android:id="@+id/cpinInput"
                         style="@style/AppTheme.Text.TextInputLayout"
                         app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -315,6 +324,7 @@
                     </android.support.design.widget.TextInputLayout>
 
                     <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ccityInput"
                         style="@style/AppTheme.Text.TextInputLayout"
                         app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -328,6 +338,7 @@
                     </android.support.design.widget.TextInputLayout>
 
                     <android.support.design.widget.TextInputLayout
+                        android:id="@+id/cdistInput"
                         style="@style/AppTheme.Text.TextInputLayout"
                         app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -341,6 +352,7 @@
 
 
                     <android.support.design.widget.TextInputLayout
+                        android:id="@+id/cstateInput"
                         style="@style/AppTheme.Text.TextInputLayout"
                         app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -387,6 +399,7 @@
                 android:textSize="20dp"/>
 
             <android.support.design.widget.TextInputLayout
+                android:id="@+id/padd1Input"
                 style="@style/AppTheme.Text.TextInputLayout"
                 app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                 app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -401,6 +414,7 @@
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
+                android:id="@+id/padd2Input"
                 style="@style/AppTheme.Text.TextInputLayout"
                 app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                 app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -428,6 +442,7 @@
 
 
                     <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ppinInput"
                         style="@style/AppTheme.Text.TextInputLayout"
                         app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -441,6 +456,7 @@
                     </android.support.design.widget.TextInputLayout>
 
                     <android.support.design.widget.TextInputLayout
+                        android:id="@+id/pcityInput"
                         style="@style/AppTheme.Text.TextInputLayout"
                         app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -454,6 +470,7 @@
                     </android.support.design.widget.TextInputLayout>
 
                     <android.support.design.widget.TextInputLayout
+                        android:id="@+id/pdistInput"
                         style="@style/AppTheme.Text.TextInputLayout"
                         app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -467,6 +484,7 @@
 
 
                     <android.support.design.widget.TextInputLayout
+                        android:id="@+id/pstateInput"
                         style="@style/AppTheme.Text.TextInputLayout"
                         app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -499,29 +517,54 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_weight="1">
-                    <Spinner
-                        android:id="@+id/sregion"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"></Spinner>
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/regionInput"
+                        style="@style/AppTheme.Text.TextInputLayout"
+                        app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
+                        app:hintTextAppearance="@style/AppTheme.Text.HintText">
+
+                        <Spinner
+                            android:id="@+id/sregion"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"></Spinner>
+
+                    </android.support.design.widget.TextInputLayout>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_weight="1">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/genderInput"
+                        style="@style/AppTheme.Text.TextInputLayout"
+                        app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
+                        app:hintTextAppearance="@style/AppTheme.Text.HintText">
+
                     <Spinner
                         android:id="@+id/sgender"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"></Spinner>
+                    </android.support.design.widget.TextInputLayout>
+
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/maritalInput"
+                        style="@style/AppTheme.Text.TextInputLayout"
+                        app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
+                        app:hintTextAppearance="@style/AppTheme.Text.HintText">
+
                     <Spinner
                         android:id="@+id/smarital"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"></Spinner>
+                    </android.support.design.widget.TextInputLayout>
                 </LinearLayout>
 
             </LinearLayout>
@@ -533,19 +576,50 @@
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:text="ACADEMIC RECORD"/>
-            
-            <Spinner
-                android:id="@+id/sexamlavel"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"></Spinner>
-            <Spinner
-                android:id="@+id/spassyear"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"></Spinner>
-            <Spinner
-                android:id="@+id/sboard"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"></Spinner>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/examInput"
+                style="@style/AppTheme.Text.TextInputLayout"
+                app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
+                app:hintTextAppearance="@style/AppTheme.Text.HintText">
+
+                <Spinner
+                    android:id="@+id/sexamlavel"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"></Spinner>
+
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/passyearInput"
+                style="@style/AppTheme.Text.TextInputLayout"
+                app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
+                app:hintTextAppearance="@style/AppTheme.Text.HintText">
+
+                <Spinner
+                    android:id="@+id/spassyear"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"></Spinner>
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/boardInput"
+                style="@style/AppTheme.Text.TextInputLayout"
+                app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
+                app:hintTextAppearance="@style/AppTheme.Text.HintText">
+
+                <Spinner
+                    android:id="@+id/sboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"></Spinner>
+
+            </android.support.design.widget.TextInputLayout>
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -559,6 +633,7 @@
                     android:orientation="vertical"
                     android:layout_weight="1">
                     <android.support.design.widget.TextInputLayout
+                        android:id="@+id/marksInput"
                         style="@style/AppTheme.Text.TextInputLayout"
                         app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -571,6 +646,7 @@
                     </android.support.design.widget.TextInputLayout>
 
                     <android.support.design.widget.TextInputLayout
+                        android:id="@+id/cgpaInput"
                         style="@style/AppTheme.Text.TextInputLayout"
                         app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -593,6 +669,7 @@
             </LinearLayout>
 
             <android.support.design.widget.TextInputLayout
+                android:id="@+id/majorstudyInput"
                 style="@style/AppTheme.Text.TextInputLayout"
                 app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                 app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -604,14 +681,32 @@
                     android:inputType="textPersonName"/>
             </android.support.design.widget.TextInputLayout>
 
-            <Spinner
-                android:id="@+id/ssast"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"></Spinner>
-            <Spinner
-                android:id="@+id/spost"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"></Spinner>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/castInput"
+                style="@style/AppTheme.Text.TextInputLayout"
+                app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
+                app:hintTextAppearance="@style/AppTheme.Text.HintText">
+
+                <Spinner
+                    android:id="@+id/scast"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"></Spinner>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/postInput"
+                style="@style/AppTheme.Text.TextInputLayout"
+                app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
+                app:hintTextAppearance="@style/AppTheme.Text.HintText">
+
+                <Spinner
+                    android:id="@+id/spost"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"></Spinner>
+
+            </android.support.design.widget.TextInputLayout>
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -785,12 +880,12 @@
                 android:layout_height="50dp"></Spinner>
 
             <Spinner
-                android:id="@+id/duration"
+                android:id="@+id/sduration"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"></Spinner>
 
             <Spinner
-                android:id="@+id/jobdescription"
+                android:id="@+id/sjobdescription"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"></Spinner>
 
@@ -833,8 +928,7 @@
                                 android:id="@+id/lastdate"
                                 android:editable="false"
                                 style="@style/AppTheme.EditText2"
-                                android:hint="Date"
-                                android:inputType="textPersonName"/>
+                                android:hint="Date"/>
 
 
                         </android.support.design.widget.TextInputLayout>
