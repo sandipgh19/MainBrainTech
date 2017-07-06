@@ -1,5 +1,6 @@
 package com.example.sandipghosh.mainbraintech;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -8,9 +9,12 @@ import android.text.InputType;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -25,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     int flag = 1;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +43,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imgshow = (ImageView) findViewById(R.id.imgshow);
 
         submit = (Button) findViewById(R.id.stated);
+
+
+
+        imgshow.setOnClickListener(this);
+        submit.setOnClickListener(this);
 
 
 
@@ -81,4 +92,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
     }
+
+
 }
