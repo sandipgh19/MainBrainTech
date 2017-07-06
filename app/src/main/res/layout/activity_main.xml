@@ -76,13 +76,15 @@
                 android:layout_height="50dp">
 
                 <EditText
+                    android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_marginLeft="60dp"
                     android:layout_marginRight="20dp"
+                    android:inputType="textPersonName"
                     android:layout_height="50dp" />
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="45dp"
+                    android:layout_width="40dp"
+                    android:layout_height="35dp"
                     android:src="@drawable/name"
                     android:scaleType="fitXY" />
             </FrameLayout>
@@ -93,13 +95,15 @@
                 android:layout_height="50dp">
 
                 <EditText
+                    android:id="@+id/mobile"
                     android:layout_width="match_parent"
                     android:layout_marginLeft="60dp"
                     android:layout_marginRight="20dp"
+                    android:inputType="number"
                     android:layout_height="50dp" />
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="45dp"
+                    android:layout_width="40dp"
+                    android:layout_height="35dp"
                     android:src="@drawable/mobile"
                     android:scaleType="fitXY" />
             </FrameLayout>
@@ -110,16 +114,19 @@
                 android:layout_height="50dp">
 
                 <EditText
+                    android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_marginLeft="60dp"
                     android:layout_marginRight="20dp"
+                    android:inputType="textPassword"
                     android:layout_height="50dp" />
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="45dp"
+                    android:layout_width="40dp"
+                    android:layout_height="35dp"
                     android:src="@drawable/key"
                     android:scaleType="fitXY" />
                 <ImageView
+                    android:id="@+id/imgshow"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/eye"
@@ -140,6 +147,11 @@
 
 
         <Button
+            android:id="@+id/stated"
+            android:background="@color/red"
+            android:alpha=".7"
+            android:textSize="15dp"
+            android:textColor="@color/white"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
@@ -150,6 +162,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -161,6 +174,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
+                android:textColor="@color/red"
                 android:text="LOGIN"/>
         </LinearLayout>
 

@@ -58,9 +58,10 @@
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                         <EditText
+                            android:id="@+id/aadhar"
                             style="@style/AppTheme.EditText2"
                             android:hint="Aadhar No"
-                            android:inputType="textPersonName"/>
+                            android:inputType="number"/>
 
                     </android.support.design.widget.TextInputLayout>
 
@@ -70,6 +71,7 @@
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                         <EditText
+                            android:id="@+id/name"
                             style="@style/AppTheme.EditText2"
                             android:hint="Name"
                             android:inputType="textPersonName"/>
@@ -82,9 +84,10 @@
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                         <EditText
+                            android:id="@+id/mobile"
                             style="@style/AppTheme.EditText2"
                             android:hint="Phone"
-                            android:inputType="textPersonName"/>
+                            android:inputType="number"/>
                     </android.support.design.widget.TextInputLayout>
 
                         <FrameLayout
@@ -97,14 +100,17 @@
                                 app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                                 <EditText
+                                    android:id="@+id/dob"
+                                    android:editable="false"
                                     style="@style/AppTheme.EditText2"
                                     android:hint="Date of Birth"
-                                    android:inputType="textPersonName"/>
+                                    android:inputType="date"/>
 
 
                             </android.support.design.widget.TextInputLayout>
 
                             <ImageView
+                                android:id="@+id/dobimg"
                                 android:layout_width="35dp"
                                 android:layout_height="30dp"
                                 android:layout_marginTop="20dp"
@@ -119,9 +125,10 @@
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                         <EditText
+                            android:id="@+id/email"
                             style="@style/AppTheme.EditText2"
                             android:hint="Email"
-                            android:inputType="textPersonName"/>
+                            android:inputType="textEmailAddress"/>
                     </android.support.design.widget.TextInputLayout>
 
                 </LinearLayout>
@@ -132,10 +139,11 @@
 
 
                     <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginLeft="50dp"
-                        android:layout_marginTop="30dp"
+                        android:id="@+id/photo"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="50dp"
                         android:src="@drawable/photo"/>
 
                 </LinearLayout>
@@ -161,7 +169,7 @@
                     android:layout_centerHorizontal="true" />
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/city_layout"
+                    android:id="@+id/father_first_layout"
                     style="@style/AppTheme.Text.TextInputLayout"
                     android:layout_alignEnd="@+id/centerAlignSpace"
                     android:layout_alignRight="@+id/centerAlignSpace"
@@ -169,26 +177,26 @@
                     app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                     <EditText
-                        android:id="@+id/city"
+                        android:id="@+id/father_first"
                         style="@style/AppTheme.EditText2"
                         android:hint="First Name"
-                        android:inputType="textPostalAddress" />
+                        android:inputType="textPersonName" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/pincode_layout"
+                    android:id="@+id/father_last_layout"
                     style="@style/AppTheme.Text.TextInputLayout"
-                    android:layout_alignTop="@+id/city_layout"
+                    android:layout_alignTop="@+id/father_first_layout"
                     android:layout_alignLeft="@+id/centerAlignSpace"
                     android:layout_alignStart="@+id/centerAlignSpace"
                     app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                     app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                     <EditText
-                        android:id="@+id/pincode"
+                        android:id="@+id/father_last"
                         style="@style/AppTheme.EditText2"
                         android:hint="Last Name"
-                        android:inputType="number" />
+                        android:inputType="textPersonName" />
                 </android.support.design.widget.TextInputLayout>
 
             </RelativeLayout>
@@ -212,7 +220,7 @@
                     android:layout_centerHorizontal="true" />
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/city_layout1"
+                    android:id="@+id/mother_first_layout"
                     style="@style/AppTheme.Text.TextInputLayout"
                     android:layout_alignEnd="@+id/centerAlignSpace1"
                     android:layout_alignRight="@+id/centerAlignSpace1"
@@ -220,26 +228,26 @@
                     app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                     <EditText
-                        android:id="@+id/city1"
+                        android:id="@+id/mother_first"
                         style="@style/AppTheme.EditText2"
                         android:hint="First Name"
-                        android:inputType="textPostalAddress" />
+                        android:inputType="textPersonName" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/pincode_layout1"
+                    android:id="@+id/mother_last_layout"
                     style="@style/AppTheme.Text.TextInputLayout"
-                    android:layout_alignTop="@+id/city_layout1"
+                    android:layout_alignTop="@+id/mother_first_layout"
                     android:layout_alignLeft="@+id/centerAlignSpace1"
                     android:layout_alignStart="@+id/centerAlignSpace1"
                     app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                     app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                     <EditText
-                        android:id="@+id/pincode1"
+                        android:id="@+id/mother_last"
                         style="@style/AppTheme.EditText2"
                         android:hint="Last Name"
-                        android:inputType="number" />
+                        android:inputType="textPersonName" />
                 </android.support.design.widget.TextInputLayout>
 
             </RelativeLayout>
@@ -248,6 +256,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="CURRENT ADDRESS"
+                android:textColor="@color/black"
                 android:layout_gravity="center"
                 android:textSize="20dp"/>
 
@@ -257,9 +266,10 @@
                 app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                 <EditText
+                    android:id="@+id/cadd1"
                     style="@style/AppTheme.EditText2"
                     android:hint="Address 1"
-                    android:inputType="textPersonName"/>
+                    android:inputType="textPostalAddress"/>
 
 
             </android.support.design.widget.TextInputLayout>
@@ -270,9 +280,10 @@
                 app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                 <EditText
+                    android:id="@+id/cadd2"
                     style="@style/AppTheme.EditText2"
                     android:hint="Address 2"
-                    android:inputType="textPersonName"/>
+                    android:inputType="textPostalAddress"/>
 
 
             </android.support.design.widget.TextInputLayout>
@@ -296,9 +307,10 @@
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                         <EditText
+                            android:id="@+id/cpin"
                             style="@style/AppTheme.EditText2"
                             android:hint="Pincode"
-                            android:inputType="textPersonName"/>
+                            android:inputType="number"/>
 
                     </android.support.design.widget.TextInputLayout>
 
@@ -308,6 +320,7 @@
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                         <EditText
+                            android:id="@+id/ccity"
                             style="@style/AppTheme.EditText2"
                             android:hint="City"
                             android:inputType="textPersonName"/>
@@ -320,6 +333,7 @@
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                         <EditText
+                            android:id="@+id/cdist"
                             style="@style/AppTheme.EditText2"
                             android:hint="District"
                             android:inputType="textPersonName"/>
@@ -332,6 +346,7 @@
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                         <EditText
+                            android:id="@+id/cstate"
                             style="@style/AppTheme.EditText2"
                             android:hint="State"
                             android:inputType="textPersonName"/>
@@ -351,6 +366,7 @@
                 android:layout_height="wrap_content">
 
                 <CheckBox
+                    android:id="@+id/c2p"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
@@ -367,6 +383,7 @@
                 android:layout_height="wrap_content"
                 android:text="PERMANENT ADDRESS"
                 android:layout_gravity="center"
+                android:textColor="@color/black"
                 android:textSize="20dp"/>
 
             <android.support.design.widget.TextInputLayout
@@ -375,9 +392,10 @@
                 app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                 <EditText
+                    android:id="@+id/padd1"
                     style="@style/AppTheme.EditText2"
                     android:hint="Address 1"
-                    android:inputType="textPersonName"/>
+                    android:inputType="textPostalAddress"/>
 
 
             </android.support.design.widget.TextInputLayout>
@@ -388,9 +406,10 @@
                 app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                 <EditText
+                    android:id="@+id/padd2"
                     style="@style/AppTheme.EditText2"
                     android:hint="Address 2"
-                    android:inputType="textPersonName"/>
+                    android:inputType="textPostalAddress"/>
 
 
             </android.support.design.widget.TextInputLayout>
@@ -414,9 +433,10 @@
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                         <EditText
+                            android:id="@+id/ppin"
                             style="@style/AppTheme.EditText2"
                             android:hint="Pincode"
-                            android:inputType="textPersonName"/>
+                            android:inputType="number"/>
 
                     </android.support.design.widget.TextInputLayout>
 
@@ -426,6 +446,7 @@
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                         <EditText
+                            android:id="@+id/pcity"
                             style="@style/AppTheme.EditText2"
                             android:hint="City"
                             android:inputType="textPersonName"/>
@@ -438,6 +459,7 @@
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                         <EditText
+                            android:id="@+id/pdist"
                             style="@style/AppTheme.EditText2"
                             android:hint="District"
                             android:inputType="textPersonName"/>
@@ -450,6 +472,7 @@
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                         <EditText
+                            android:id="@+id/pstate"
                             style="@style/AppTheme.EditText2"
                             android:hint="State"
                             android:inputType="textPersonName"/>
@@ -477,6 +500,7 @@
                     android:orientation="vertical"
                     android:layout_weight="1">
                     <Spinner
+                        android:id="@+id/sregion"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"></Spinner>
                 </LinearLayout>
@@ -486,6 +510,7 @@
                     android:orientation="vertical"
                     android:layout_weight="1">
                     <Spinner
+                        android:id="@+id/sgender"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"></Spinner>
                 </LinearLayout>
@@ -494,6 +519,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
                     <Spinner
+                        android:id="@+id/smarital"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"></Spinner>
                 </LinearLayout>
@@ -504,15 +530,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20dp"
                 android:text="ACADEMIC RECORD"/>
             
             <Spinner
+                android:id="@+id/sexamlavel"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"></Spinner>
             <Spinner
+                android:id="@+id/spassyear"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"></Spinner>
             <Spinner
+                android:id="@+id/sboard"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"></Spinner>
 
@@ -533,9 +564,10 @@
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                         <EditText
+                            android:id="@+id/marks"
                             style="@style/AppTheme.EditText2"
                             android:hint="Marks"
-                            android:inputType="textPersonName"/>
+                            android:inputType="number"/>
                     </android.support.design.widget.TextInputLayout>
 
                     <android.support.design.widget.TextInputLayout
@@ -544,6 +576,7 @@
                         app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                         <EditText
+                            android:id="@+id/cgpa"
                             style="@style/AppTheme.EditText2"
                             android:hint="Division/Grade/CGPA"
                             android:inputType="textPersonName"/>
@@ -565,15 +598,18 @@
                 app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                 <EditText
+                    android:id="@+id/majorstudy"
                     style="@style/AppTheme.EditText2"
                     android:hint="Major Subjects of Study"
                     android:inputType="textPersonName"/>
             </android.support.design.widget.TextInputLayout>
 
             <Spinner
+                android:id="@+id/ssast"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"></Spinner>
             <Spinner
+                android:id="@+id/spost"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"></Spinner>
 
@@ -583,9 +619,12 @@
                 android:gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                android:textSize="15dp"
                 android:text="DETAILS OF EMPLOYMENT IN\n CHRONOLOGICAL ORDER"/>
 
             <Spinner
+                android:id="@+id/soffice"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"></Spinner>
 
@@ -611,14 +650,17 @@
                             app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                             <EditText
+                                android:id="@+id/dateform"
+                                android:editable="false"
                                 style="@style/AppTheme.EditText2"
                                 android:hint="From"
-                                android:inputType="textPersonName"/>
+                                android:inputType="date"/>
 
 
                         </android.support.design.widget.TextInputLayout>
 
                         <ImageView
+                            android:id="@+id/imgform"
                             android:layout_width="35dp"
                             android:layout_height="30dp"
                             android:layout_marginTop="20dp"
@@ -643,14 +685,17 @@
                             app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                             <EditText
+                                android:id="@+id/dateto"
+                                android:editable="false"
                                 style="@style/AppTheme.EditText2"
                                 android:hint="To"
-                                android:inputType="textPersonName"/>
+                                android:inputType="date"/>
 
 
                         </android.support.design.widget.TextInputLayout>
 
                         <ImageView
+                            android:id="@+id/imgto"
                             android:layout_width="35dp"
                             android:layout_height="30dp"
                             android:layout_marginTop="20dp"
@@ -663,16 +708,19 @@
             </LinearLayout>
 
             <Spinner
+                android:id="@+id/spay"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"></Spinner>
 
             <Spinner
+                android:id="@+id/snature"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"></Spinner>
 
 
 
                 <EditText
+                    android:id="@+id/employment"
                     style="@style/AppTheme.EditText2"
                     android:hint="Nature of Present Employment(temporary/\ncontact)"
                     android:inputType="textPersonName"/>
@@ -685,9 +733,10 @@
                 app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                 <EditText
+                    android:id="@+id/totalemoluments"
                     style="@style/AppTheme.EditText2"
                     android:hint="Total emoluments per month drawn"
-                    android:inputType="textPersonName"/>
+                    android:inputType="number"/>
 
 
             </android.support.design.widget.TextInputLayout>
@@ -695,6 +744,7 @@
 
 
                 <EditText
+                    android:id="@+id/additionalInfo"
                     style="@style/AppTheme.EditText2"
                     android:hint="Additional Information(sustainability\n of the post)"
                     android:inputType="textPersonName"/>
@@ -706,6 +756,7 @@
                 app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                 <EditText
+                    android:id="@+id/remarks"
                     style="@style/AppTheme.EditText2"
                     android:hint="Remarks(if any)"
                     android:inputType="textPersonName"/>
@@ -719,21 +770,27 @@
                 android:gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                android:textSize="17dp"
                 android:text="PROFESSIONAL EXPERIENCE"/>
 
             <Spinner
+                android:id="@+id/sexactname"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"></Spinner>
 
             <Spinner
+                android:id="@+id/sorganization"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"></Spinner>
 
             <Spinner
+                android:id="@+id/duration"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"></Spinner>
 
             <Spinner
+                android:id="@+id/jobdescription"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"></Spinner>
 
@@ -742,6 +799,7 @@
                 android:layout_height="wrap_content">
 
                 <CheckBox
+                    android:id="@+id/lastbox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
@@ -772,6 +830,8 @@
                             app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                             <EditText
+                                android:id="@+id/lastdate"
+                                android:editable="false"
                                 style="@style/AppTheme.EditText2"
                                 android:hint="Date"
                                 android:inputType="textPersonName"/>
@@ -780,6 +840,7 @@
                         </android.support.design.widget.TextInputLayout>
 
                         <ImageView
+                            android:id="@+id/lastimgdate"
                             android:layout_width="35dp"
                             android:layout_height="30dp"
                             android:layout_marginTop="20dp"
@@ -802,6 +863,7 @@
                             app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                             <EditText
+                                android:id="@+id/fullname"
                                 style="@style/AppTheme.EditText2"
                                 android:hint="Full name of Candidate"
                                 android:inputType="textPersonName"/>
@@ -826,6 +888,8 @@
                     app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                     <EditText
+                        android:id="@+id/signature"
+                        android:editable="false"
                         style="@style/AppTheme.EditText2"
                         android:hint="Signature"
                         android:inputType="textPersonName"/>
@@ -834,31 +898,27 @@
                 </android.support.design.widget.TextInputLayout>
 
                 <ImageView
+                    android:id="@+id/imgsignature"
                     android:layout_width="35dp"
                     android:layout_height="30dp"
                     android:layout_marginTop="20dp"
                     android:layout_gravity="right"
                     android:src="@drawable/camera"/>
 
-
-
             </FrameLayout>
 
-
             <Button
+                android:id="@+id/register"
                 android:layout_width="150dp"
                 android:layout_height="70dp"
                 android:text="Register"
+                android:background="@color/red"
+                android:alpha=".7"
+                android:textColor="@color/white"
                 android:layout_gravity="center"
+                android:textSize="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"/>
-
-
-
-
-
-
-
 
 
         </LinearLayout>

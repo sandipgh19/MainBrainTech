@@ -46,7 +46,7 @@
                     android:layout_centerHorizontal="true" />
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/city_layout"
+                    android:id="@+id/first_layout"
                     style="@style/AppTheme.Text.TextInputLayout"
                     android:layout_alignEnd="@+id/centerAlignSpace"
                     android:layout_alignRight="@+id/centerAlignSpace"
@@ -54,52 +54,72 @@
                     app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                     <EditText
-                        android:id="@+id/city"
+                        android:id="@+id/firstname"
                         style="@style/AppTheme.EditText2"
                         android:hint="First Name"
-                        android:inputType="textPostalAddress" />
+                        android:inputType="textPersonName" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/pincode_layout"
                     style="@style/AppTheme.Text.TextInputLayout"
-                    android:layout_alignTop="@+id/city_layout"
+                    android:layout_alignTop="@+id/first_layout"
                     android:layout_alignLeft="@+id/centerAlignSpace"
                     android:layout_alignStart="@+id/centerAlignSpace"
                     app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                     app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                     <EditText
-                        android:id="@+id/pincode"
+                        android:id="@+id/lastname"
                         style="@style/AppTheme.EditText2"
                         android:hint="Last Name"
-                        android:inputType="number" />
+                        android:inputType="textPersonName" />
                 </android.support.design.widget.TextInputLayout>
 
             </RelativeLayout>
 
 
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/AppTheme.Text.TextInputLayout"
+                    app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
+                    app:hintTextAppearance="@style/AppTheme.Text.HintText">
+
+                    <EditText
+                        android:id="@+id/dob"
+                        android:editable="false"
+                        style="@style/AppTheme.EditText2"
+                        android:hint="Date of Birth"
+                        android:inputType="date"/>
+
+
+                </android.support.design.widget.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/dobimg"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/date"/>
+
+            </FrameLayout>
+
+
+
             <android.support.design.widget.TextInputLayout
                 style="@style/AppTheme.Text.TextInputLayout"
                 app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                 app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                 <EditText
-                    style="@style/AppTheme.EditText2"
-                    android:hint="Date of Birth"
-                    android:inputType="textPersonName"/>
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                style="@style/AppTheme.Text.TextInputLayout"
-                app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
-                app:hintTextAppearance="@style/AppTheme.Text.HintText">
-
-                <EditText
+                    android:id="@+id/email"
                     style="@style/AppTheme.EditText2"
                     android:hint="Email"
-                    android:inputType="textPersonName"/>
+                    android:inputType="textEmailAddress"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -109,21 +129,25 @@
                 app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                 <EditText
+                    android:id="@+id/mobile"
                     style="@style/AppTheme.EditText2"
                     android:hint="Phone"
-                    android:inputType="textPersonName"/>
+                    android:inputType="number"/>
 
             </android.support.design.widget.TextInputLayout>
 
             <Spinner
+                android:id="@+id/sloction"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"></Spinner>
 
             <Spinner
+                android:id="@+id/stotalexp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"></Spinner>
 
             <Spinner
+                android:id="@+id/sacademic"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"></Spinner>
 
@@ -137,6 +161,7 @@
                 app:hintTextAppearance="@style/AppTheme.Text.HintText">
 
                 <EditText
+                    android:id="@+id/function"
                     style="@style/AppTheme.EditText2"
                     android:hint="Function"
                     android:inputType="textPersonName"/>
@@ -151,6 +176,7 @@
                 android:orientation="horizontal">
 
                 <CheckBox
+                    android:id="@+id/lastbox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
@@ -163,11 +189,16 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/submit"
                 android:layout_width="150dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="15dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="20dp"
+                android:background="@color/red"
+                android:alpha=".7"
+                android:textColor="@color/white"
+                android:textSize="20dp"
                 android:text="Submit"/>
 
 
