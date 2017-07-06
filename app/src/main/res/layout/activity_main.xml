@@ -6,24 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:elevation="0dp"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-
-    </android.support.design.widget.AppBarLayout>
 
     <ScrollView
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="10dp"
         android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -34,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="10dp"
+        android:background="@color/white"
         android:layout_marginRight="10dp"
         android:orientation="vertical">
 
@@ -45,7 +31,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="170dp"
+                android:layout_height="200dp"
                 android:src="@drawable/flag"
                 android:scaleType="fitXY"/>
             <TextView
@@ -53,13 +39,19 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Goverments Jobs"
+                android:textColor="@color/black"
+                android:alpha=".8"
                 android:textSize="35dp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/black"
+                android:alpha=".8"
                 android:text="Sign Up"
-                android:textSize="25dp"/>
+                android:textSize="27dp"/>
 
 
 
@@ -85,6 +77,7 @@
                     android:layout_height="50dp" />
                 <ImageView
                     android:layout_width="40dp"
+                    android:layout_marginTop="10dp"
                     android:layout_height="35dp"
                     android:src="@drawable/name"
                     android:scaleType="fitXY" />
@@ -105,6 +98,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
                     android:src="@drawable/mobile"
                     android:scaleType="fitXY" />
             </FrameLayout>
@@ -124,6 +118,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
                     android:src="@drawable/key"
                     android:scaleType="fitXY" />
                 <ImageView
@@ -151,12 +146,12 @@
             android:id="@+id/stated"
             android:background="@color/red"
             android:alpha=".7"
-            android:textSize="15dp"
+            android:textSize="17dp"
             android:textColor="@color/white"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:text="Get Started"/>
 
         <LinearLayout
@@ -170,7 +165,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
-                android:text="Already Have an Account  "/>
+                android:text="Already have an account  "/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

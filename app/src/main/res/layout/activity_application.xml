@@ -15,16 +15,26 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:elevation="0dp"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+            android:layout_height="70dp"
+            android:background="@color/green"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TextView
+                android:text="REGISTRATION"
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+        </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
 
     <ScrollView
         android:id="@+id/applicationScroll"
         android:layout_width="match_parent"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="71dp"
         android:background="@color/white"
         android:layout_height="match_parent">
 
@@ -32,6 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:background="@color/white"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp">
 
@@ -51,6 +62,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="16dp"
+                        android:textColor="@color/black"
                         android:text="Application reference no.\n1234567890"/>
 
                     <android.support.design.widget.TextInputLayout
@@ -108,8 +120,7 @@
                                     android:id="@+id/dob"
                                     android:editable="false"
                                     style="@style/AppTheme.EditText2"
-                                    android:hint="Date of Birth"
-                                    android:inputType="date"/>
+                                    android:hint="Date of Birth"/>
 
 
                             </android.support.design.widget.TextInputLayout>
@@ -146,6 +157,7 @@
 
                     <ImageView
                         android:id="@+id/photo"
+                        android:scaleType="fitXY"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_marginLeft="40dp"
@@ -262,6 +274,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="CURRENT ADDRESS"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:textColor="@color/black"
                 android:layout_gravity="center"
                 android:textSize="20dp"/>
@@ -382,6 +396,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    android:id="@+id/ptext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Permanent address same as current address"
@@ -394,6 +409,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="PERMANENT ADDRESS"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_gravity="center"
                 android:textColor="@color/black"
                 android:textSize="20dp"/>
@@ -575,6 +592,8 @@
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:text="ACADEMIC RECORD"/>
 
             <android.support.design.widget.TextInputLayout
@@ -715,7 +734,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/black"
-                android:textSize="15dp"
+                android:textSize="17dp"
                 android:text="DETAILS OF EMPLOYMENT IN\n CHRONOLOGICAL ORDER"/>
 
             <Spinner
@@ -748,8 +767,7 @@
                                 android:id="@+id/dateform"
                                 android:editable="false"
                                 style="@style/AppTheme.EditText2"
-                                android:hint="From"
-                                android:inputType="date"/>
+                                android:hint="From"/>
 
 
                         </android.support.design.widget.TextInputLayout>
@@ -783,8 +801,7 @@
                                 android:id="@+id/dateto"
                                 android:editable="false"
                                 style="@style/AppTheme.EditText2"
-                                android:hint="To"
-                                android:inputType="date"/>
+                                android:hint="To"/>
 
 
                         </android.support.design.widget.TextInputLayout>
@@ -866,7 +883,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/black"
-                android:textSize="17dp"
+                android:textSize="18dp"
                 android:text="PROFESSIONAL EXPERIENCE"/>
 
             <Spinner
@@ -898,6 +915,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    android:id="@+id/confirm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/declaration"/>
@@ -920,6 +938,7 @@
                         android:layout_height="wrap_content">
 
                         <android.support.design.widget.TextInputLayout
+                            android:id="@+id/lastdateInput"
                             style="@style/AppTheme.Text.TextInputLayout"
                             app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                             app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -952,6 +971,7 @@
                     android:layout_weight="1">
 
                         <android.support.design.widget.TextInputLayout
+                            android:id="@+id/fullnameInput"
                             style="@style/AppTheme.Text.TextInputLayout"
                             app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                             app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -977,6 +997,7 @@
                 android:layout_gravity="right">
 
                 <android.support.design.widget.TextInputLayout
+                    android:id="@+id/signatureInput"
                     style="@style/AppTheme.Text.TextInputLayout"
                     app:errorTextAppearance="@style/AppTheme.Text.ErrorText"
                     app:hintTextAppearance="@style/AppTheme.Text.HintText">
@@ -985,11 +1006,19 @@
                         android:id="@+id/signature"
                         android:editable="false"
                         style="@style/AppTheme.EditText2"
-                        android:hint="Signature"
-                        android:inputType="textPersonName"/>
+                        android:hint="Signature"/>
 
 
                 </android.support.design.widget.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/sigimg"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="40dp"/>
 
                 <ImageView
                     android:id="@+id/imgsignature"

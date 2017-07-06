@@ -2,9 +2,11 @@ package com.example.sandipghosh.mainbraintech;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -45,11 +47,17 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     private ScrollView scrollView;
     private TextView agree;
     Calendar calendar;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+
+        setTitle("");
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         firstname = (EditText) findViewById(R.id.firstname);
 
@@ -225,6 +233,9 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                 Toast.makeText(this,"Please select the box",Toast.LENGTH_LONG).show();
                 return;
             }
+
+            Intent intent = new Intent(this,Application.class);
+            startActivity(intent);
 
 
         } else if(v==agree) {
