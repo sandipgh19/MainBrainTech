@@ -59,7 +59,7 @@ public class Application extends AppCompatActivity implements View.OnClickListen
     ImageView dobimage,toimage,formimage,dateimage,signatureimage;
 
     Button submit;
-    int p;
+    int p,flag = 0;
 
     private TextInputLayout aadharInput;
     private TextInputLayout nameInput;
@@ -354,7 +354,7 @@ public class Application extends AppCompatActivity implements View.OnClickListen
                 errorMessage = "Please fill this";
                 fatherfirstInput.setErrorEnabled(true);
                 fatherfirstInput.setError(errorMessage);
-                scrollView.smoothScrollTo(0, fatherfirstInput.getTop());
+                scrollView.smoothScrollTo(0, emailInput.getTop());
                 return;
             }
 
@@ -363,7 +363,7 @@ public class Application extends AppCompatActivity implements View.OnClickListen
                 errorMessage = "Please fill this";
                 motherfirstInput.setErrorEnabled(true);
                 motherfirstInput.setError(errorMessage);
-                scrollView.smoothScrollTo(0, motherfirstInput.getTop());
+                scrollView.smoothScrollTo(0, emailInput.getTop());
                 return;
             }
 
@@ -387,7 +387,7 @@ public class Application extends AppCompatActivity implements View.OnClickListen
                 errorMessage = "Please fill this";
                 cpinInput.setErrorEnabled(true);
                 cpinInput.setError(errorMessage);
-                scrollView.smoothScrollTo(0, cpinInput.getTop());
+                scrollView.smoothScrollTo(0, cadd2Input.getTop());
                 return;
             }
 
@@ -395,7 +395,7 @@ public class Application extends AppCompatActivity implements View.OnClickListen
                 errorMessage = "Please fill this";
                 ccityInput.setErrorEnabled(true);
                 ccityInput.setError(errorMessage);
-                scrollView.smoothScrollTo(0, ccityInput.getTop());
+                scrollView.smoothScrollTo(0, cadd2Input.getTop());
                 return;
             }
 
@@ -403,7 +403,7 @@ public class Application extends AppCompatActivity implements View.OnClickListen
                 errorMessage = "Please fill this";
                 cdistInput.setErrorEnabled(true);
                 cdistInput.setError(errorMessage);
-                scrollView.smoothScrollTo(0, cdistInput.getTop());
+                scrollView.smoothScrollTo(0, cadd2Input.getTop());
                 return;
             }
 
@@ -411,7 +411,7 @@ public class Application extends AppCompatActivity implements View.OnClickListen
                 errorMessage = "Please fill this";
                 cstateInput.setErrorEnabled(true);
                 cstateInput.setError(errorMessage);
-                scrollView.smoothScrollTo(0, cstateInput.getTop());
+                scrollView.smoothScrollTo(0, cadd2Input.getTop());
                 return;
             }
 
@@ -434,21 +434,21 @@ public class Application extends AppCompatActivity implements View.OnClickListen
                 errorMessage = "Please fill this";
                 ppinInput.setErrorEnabled(true);
                 ppinInput.setError(errorMessage);
-                scrollView.smoothScrollTo(0, ppinInput.getTop());
+                scrollView.smoothScrollTo(0, padd2Input.getTop());
                 return;
             }
             if(p_city.getText().toString().isEmpty()) {
                 errorMessage = "Please fill this";
                 pcityInput.setErrorEnabled(true);
                 pcityInput.setError(errorMessage);
-                scrollView.smoothScrollTo(0, pcityInput.getTop());
+                scrollView.smoothScrollTo(0, padd2Input.getTop());
                 return;
             }
             if(p_dist.getText().toString().isEmpty()) {
                 errorMessage = "Please fill this";
                 pdistInput.setErrorEnabled(true);
                 pdistInput.setError(errorMessage);
-                scrollView.smoothScrollTo(0, pdistInput.getTop());
+                scrollView.smoothScrollTo(0, padd2Input.getTop());
                 return;
             }
 
@@ -456,7 +456,7 @@ public class Application extends AppCompatActivity implements View.OnClickListen
                 errorMessage = "Please fill this";
                 pstateInput.setErrorEnabled(true);
                 pstateInput.setError(errorMessage);
-                scrollView.smoothScrollTo(0, pstateInput.getTop());
+                scrollView.smoothScrollTo(0, padd2Input.getTop());
                 return;
             }
 
@@ -464,21 +464,21 @@ public class Application extends AppCompatActivity implements View.OnClickListen
                 errorMessage = "Please select this";
                 religionInput.setErrorEnabled(true);
                 religionInput.setError(errorMessage);
-                scrollView.smoothScrollTo(0, religionInput.getTop());
+                scrollView.smoothScrollTo(0, padd2Input.getTop());
                 return;
             }
             if(s_gender.getSelectedItem().toString().equals("Gender")) {
                 errorMessage = "Please select this";
                 genderInput.setErrorEnabled(true);
                 genderInput.setError(errorMessage);
-                scrollView.smoothScrollTo(0, genderInput.getTop());
+                scrollView.smoothScrollTo(0, padd2Input.getTop());
                 return;
             }
             if(s_material.getSelectedItem().toString().equals("Marital Status")) {
                 errorMessage = "Please select this";
                 maritalInput.setErrorEnabled(true);
                 maritalInput.setError(errorMessage);
-                scrollView.smoothScrollTo(0, maritalInput.getTop());
+                scrollView.smoothScrollTo(0, padd2Input.getTop());
                 return;
             }
             if(s_examlevel.getSelectedItem().toString().equals("Examination Level")) {
@@ -506,14 +506,14 @@ public class Application extends AppCompatActivity implements View.OnClickListen
                 errorMessage = "Please fill this";
                 marksInput.setErrorEnabled(true);
                 marksInput.setError(errorMessage);
-                scrollView.smoothScrollTo(0, marksInput.getTop());
+                scrollView.smoothScrollTo(0, boardInput.getTop());
                 return;
             }
             if(division.getText().toString().isEmpty()) {
                 errorMessage = "Please fill this";
                 divitionInput.setErrorEnabled(true);
                 divitionInput.setError(errorMessage);
-                scrollView.smoothScrollTo(0, divitionInput.getTop());
+                scrollView.smoothScrollTo(0, boardInput.getTop());
                 return;
             }
             if(major_study.getText().toString().isEmpty()) {
@@ -531,20 +531,24 @@ public class Application extends AppCompatActivity implements View.OnClickListen
                 return;
             }
 
+            if(flag==0) {
+                Toast.makeText(this,"please choose photo",Toast.LENGTH_LONG).show();
+                return;
+            }
+
             if(lastdate.getText().toString().isEmpty()) {
                 errorMessage = "Please fill this";
                 lastdateInput.setErrorEnabled(true);
                 lastdateInput.setError(errorMessage);
-                scrollView.smoothScrollTo(0, lastdateInput.getTop());
+                //scrollView.smoothScrollTo(0, lastdateInput.getTop());
                 return;
             }
-
 
             if(fullname.getText().toString().isEmpty()) {
                 errorMessage = "Please fill this";
                 fullnameInput.setErrorEnabled(true);
                 fullnameInput.setError(errorMessage);
-                scrollView.smoothScrollTo(0, fullnameInput.getTop());
+               // scrollView.smoothScrollTo(0, fullnameInput.getTop());
                 return;
             }
             if(sigimg.getVisibility() == View.GONE) {
@@ -552,7 +556,7 @@ public class Application extends AppCompatActivity implements View.OnClickListen
                 errorMessage = "Please fill this";
                 signatureInput.setErrorEnabled(true);
                 signatureInput.setError(errorMessage);
-                scrollView.smoothScrollTo(0, signatureInput.getTop());
+               // scrollView.smoothScrollTo(0, signatureInput.getTop());
                 return;
             }
 
@@ -562,6 +566,12 @@ public class Application extends AppCompatActivity implements View.OnClickListen
                 return;
 
             }
+
+            Toast.makeText(this,"Thanks! for your response",Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this,MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
 
 
 
@@ -588,6 +598,8 @@ public class Application extends AppCompatActivity implements View.OnClickListen
             if(!c_city.getText().toString().isEmpty()) {
                 p_city.setText(c_city.getText().toString());
             }
+
+
 
 
         } else if(v==confirm) {
@@ -647,8 +659,7 @@ public class Application extends AppCompatActivity implements View.OnClickListen
         relegion1.add("Religion");
         relegion1.add("Hindu");
         relegion1.add("Muslim");
-        relegion1.add("Christan");
-        relegion1.add("Other");
+        relegion1.add("Others");
 
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, relegion1);
@@ -1034,6 +1045,7 @@ public class Application extends AppCompatActivity implements View.OnClickListen
                 //Setting the Bitmap to ImageView
                 if(p==1){
                     photo.setImageBitmap(bitmap);
+                    flag = 1;
                 } else {
                     sigimg.setVisibility(View.VISIBLE);
                     sigimg.setImageBitmap(bitmap);
