@@ -107,7 +107,7 @@ public class Application extends AppCompatActivity implements View.OnClickListen
     Calendar calendar2;
     Calendar calendar3;
 
-    private ImageView sigimg;
+    private ImageView sigimg,back;
 
     String currentDate;
     private int PICK_IMAGE_REQUEST = 1;
@@ -127,7 +127,7 @@ public class Application extends AppCompatActivity implements View.OnClickListen
         setTitle("");
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
 
         aadhar = (EditText) findViewById(R.id.aadhar);
@@ -190,6 +190,7 @@ public class Application extends AppCompatActivity implements View.OnClickListen
         ptext = (TextView) findViewById(R.id.ptext);
         photo = (ImageView) findViewById(R.id.photo);
         sigimg = (ImageView) findViewById(R.id.sigimg);
+        back = (ImageView) findViewById(R.id.back);
 
         initlayout();
         initSpinner();
@@ -207,6 +208,7 @@ public class Application extends AppCompatActivity implements View.OnClickListen
         ptext.setOnClickListener(this);
         photo.setOnClickListener(this);
         signatureimage.setOnClickListener(this);
+        back.setOnClickListener(this);
     }
 
 
@@ -617,8 +619,10 @@ public class Application extends AppCompatActivity implements View.OnClickListen
             p=0;
             showFileChooser();
 
-        }
+        } else if(v==back){
 
+            finish();
+        }
     }
 
     private void initSpinner() {

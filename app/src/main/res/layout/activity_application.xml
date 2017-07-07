@@ -15,17 +15,25 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:elevation="0dp"
-            android:layout_height="70dp"
+            android:layout_height="75dp"
             android:background="@color/green"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
             <TextView
                 android:text="REGISTRATION"
-                android:textSize="25dp"
+                android:textSize="23dp"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"/>
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center|left"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_arrow_back_white_18dp"/>
 
         </android.support.v7.widget.Toolbar>
 
@@ -34,7 +42,7 @@
     <ScrollView
         android:id="@+id/applicationScroll"
         android:layout_width="match_parent"
-        android:layout_marginTop="71dp"
+        android:layout_marginTop="76dp"
         android:background="@color/white"
         android:layout_height="match_parent">
 
@@ -1033,7 +1041,7 @@
             <Button
                 android:id="@+id/register"
                 android:layout_width="150dp"
-                android:layout_height="70dp"
+                android:layout_height="60dp"
                 android:text="Register"
                 android:background="@color/red"
                 android:alpha=".7"

@@ -32,7 +32,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
     private EditText firstname, lastname,dob,email,phone,function;
     private Spinner location, experience, qualification;
-    private ImageView image;
+    private ImageView image,back;
     private CheckBox checkBox;
     private Button submit;
     private TextInputLayout emailInput;
@@ -49,6 +49,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     Calendar calendar;
     Toolbar toolbar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +58,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         setTitle("");
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         firstname = (EditText) findViewById(R.id.firstname);
 
@@ -77,6 +78,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         qualification = (Spinner) findViewById(R.id.sacademic);
 
         agree = (TextView) findViewById(R.id.agree);
+        back = (ImageView) findViewById(R.id.back);
 
         firstInput = (TextInputLayout) findViewById(R.id.first_layout);
         lastInput = (TextInputLayout) findViewById(R.id.last_layout);
@@ -145,6 +147,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         submit.setOnClickListener(this);
         agree.setOnClickListener(this);
         image.setOnClickListener(this);
+        back.setOnClickListener(this);
     }
 
     @Override
@@ -244,6 +247,9 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         } else if(v==image) {
 
             dateSelected();
+        } else if(v==back) {
+
+            finish();
         }
     }
 
