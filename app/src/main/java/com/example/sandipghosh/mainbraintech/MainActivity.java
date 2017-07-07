@@ -78,6 +78,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             userpassword = password.getText().toString();
             usermobile = mobile.getText().toString();
 
+            if(!User.userValid(username)) {
+
+                Toast.makeText(this,"please fill username",Toast.LENGTH_LONG).show();
+                return;
+            }
+
+            if(!User.userValid(usermobile)) {
+
+                Toast.makeText(this,"please fill mobile",Toast.LENGTH_LONG).show();
+                return;
+            }
+
+            if (!User.mobileValid(usermobile)){
+                Toast.makeText(this,"10 digit required for mobile",Toast.LENGTH_LONG).show();
+                return;
+            }
+
+            if(!User.userValid(userpassword)) {
+
+                Toast.makeText(this,"please fill password",Toast.LENGTH_LONG).show();
+                return;
+            }
+            if (!User.passwordValid(userpassword)){
+                Toast.makeText(this,"min 6 charecter required for password",Toast.LENGTH_LONG).show();
+                return;
+            }
+
+
             if(!username.isEmpty()&&!usermobile.isEmpty()&&!userpassword.isEmpty()) {
 
                 Intent intent = new Intent(this,SignUp.class);

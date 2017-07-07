@@ -190,10 +190,25 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                 return;
             }
 
+            if (!User.emailValid(email.getText().toString())){
+                errorMessage = "Invalid email id";
+                emailInput.setErrorEnabled(true);
+                emailInput.setError(errorMessage);
+                scrollView.smoothScrollTo(0, emailInput.getTop());
+                return;
+            }
 
 
             if(phone.getText().toString().isEmpty()) {
                 errorMessage = "Please fill mobile no";
+                mobileInput.setErrorEnabled(true);
+                mobileInput.setError(errorMessage);
+                scrollView.smoothScrollTo(0, mobileInput.getTop());
+                return;
+            }
+
+            if (!User.mobileValid(phone.getText().toString())){
+                errorMessage = "10 digits required";
                 mobileInput.setErrorEnabled(true);
                 mobileInput.setError(errorMessage);
                 scrollView.smoothScrollTo(0, mobileInput.getTop());

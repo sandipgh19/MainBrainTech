@@ -318,6 +318,14 @@ public class Application extends AppCompatActivity implements View.OnClickListen
                 return;
             }
 
+            if (!User.mobileValid(phone.getText().toString())){
+                errorMessage = "10 digits required";
+                phoneInput.setErrorEnabled(true);
+                phoneInput.setError(errorMessage);
+                scrollView.smoothScrollTo(0, phoneInput.getTop());
+                return;
+            }
+
             if(dob.getText().toString().isEmpty()) {
                 errorMessage = "Please fill this";
                 dobInput.setErrorEnabled(true);
@@ -328,6 +336,14 @@ public class Application extends AppCompatActivity implements View.OnClickListen
 
             if(email.getText().toString().isEmpty()) {
                 errorMessage = "Please fill this";
+                emailInput.setErrorEnabled(true);
+                emailInput.setError(errorMessage);
+                scrollView.smoothScrollTo(0, emailInput.getTop());
+                return;
+            }
+
+            if (!User.emailValid(email.getText().toString())){
+                errorMessage = "Invalid email id";
                 emailInput.setErrorEnabled(true);
                 emailInput.setError(errorMessage);
                 scrollView.smoothScrollTo(0, emailInput.getTop());
